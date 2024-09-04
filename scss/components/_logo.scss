@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.logo {
+  color: $primary-500;
+  font-size: rem(32);
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: rem(-0.96);
+
+  @include mobile {
+    font-size: rem(24);
+    line-height: 120%;
+  }
+}

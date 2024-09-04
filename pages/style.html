@@ -7,7 +7,37 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="logo">
+          <a href="#">
+            <span>MORENT</span>
+          </a>
+        </h1>
+        <div class="header__search">
+          <input type="search" value="Search something here" id="search_1" />
+          <button aria-label="필터버튼">
+            <img src="../images/ico_filter.svg" alt="" />
+          </button>
+        </div>
+        <div class="utillity">
+          <button class="btn-like" aria-label="하트"></button>
+          <button class="btn-alarm" aria-label="알람">
+            <span class="alarm-active"></span>
+          </button>
+          <button class="btn-setting" aria-label="설정"></button>
+          <button class="avatar">
+            <!-- 참고 -->
+            <!-- <picture>
+              <source srcset="../images/logo_white.svg" / media="(1000px > width)">
+              <img src="../images/logo.svg" alt="Rebehayan " />
+            </picture> -->
+
+            <img src="../images/@avatar.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
     <main>본문삽입</main>
     <footer class="footer"></footer>
   </body>
