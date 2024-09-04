@@ -1,5 +1,7 @@
 @use "../abstracts/" as *;
 
+// 따로 분리된 것들만  text-type으로 분리 컴포넌트 안에 있는 것들은 정의 하지 않아도 됨
+
 @layer Components.Text {
   .text-type3 {
   }

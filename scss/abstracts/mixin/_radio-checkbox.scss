@@ -6,6 +6,7 @@
     @include a11y-hidden;
     + label {
       @extend %label;
+
       &::before {
         @include background(map-get($mapName, $index, offImage));
         content: "";

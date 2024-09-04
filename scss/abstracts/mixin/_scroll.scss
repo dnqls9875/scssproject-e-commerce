@@ -1,13 +1,15 @@
 @use "../function" as *;
 
 @mixin scroll($width, $radius, $color) {
+  // 전체 스크롤바
   &::-webkit-scrollbar {
     width: rem($width);
     background-color: transparent;
   }
+  //   스크롤 핸들링 하는 바
   &::-webkit-scrollbar-thumb {
     width: rem($width);
-    background-color: $color;
+    background: $color;
     border-radius: rem($radius);
   }
 }

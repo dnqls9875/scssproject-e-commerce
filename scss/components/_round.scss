@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-$round: 8, 16, 24, "-full";
+$round: 8, "-full";
 
 @layer Components.Rounded {
   .rounded {

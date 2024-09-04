@@ -3,6 +3,8 @@
 @mixin listStyle($varName, $index) {
   #{map-get($varName, $index, className)} {
     color: map-get($varName, $index, color);
+    @content;
+
     @if map-get($varName, $index, textType) {
       @extend #{map-get($varName, $index, textType)};
     }
@@ -11,7 +13,6 @@
       display: grid;
       grid-template-columns: min-content 1fr;
       align-items: center;
-      @content;
       &::before {
         display: inline-block;
         margin: map-get($varName, $index, margin);

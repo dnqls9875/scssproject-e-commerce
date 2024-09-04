@@ -12,7 +12,7 @@
 }
 
 @mixin buttonColor($varName, $index) {
-  &#{map-get($varName, $index, className)} {
+  &#{map-get($varName,$index, className)} {
     background-color: map-get($varName, $index, bgColor);
     color: map-get($varName, $index, color);
     border-color: map-get($varName, $index, borderColor);
@@ -20,7 +20,7 @@
 }
 
 @mixin buttonIcon($varName, $index) {
-  &#{map-get($varName, $index, className)} {
+  &#{map-get($varName,$index, className)} {
     &::#{map-get($varName, $index, direction)} {
       @include background(map-get($varName, $index, imgName));
       content: "";

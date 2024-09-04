@@ -1,7 +1,6 @@
-@use "../variables" as *;
+@use "../variable" as *;
 
-@mixin background($filename, $coordinate: null, $bgcolor: null, $bgsize: contain) {
-  background: url(#{$imgurl}#{$filename}) no-repeat $coordinate $bgcolor;
-  background-size: $bgsize;
-  // background: url(#{$imgurl}#{$filename}) no-repeat 좌표 배경색;
+@mixin background($fileName, $coordinate: null, $bgColor: null, $bgSize: contain) {
+  background: url(#{$imgurl}#{$fileName}) no-repeat $coordinate $bgColor;
+  background-size: $bgSize;
 }

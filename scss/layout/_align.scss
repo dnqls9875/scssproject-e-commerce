@@ -26,7 +26,6 @@
         justify-self: end;
       }
     }
-
     &.vt {
       align-items: flex-start;
     }
@@ -52,7 +51,7 @@
 
   .mxauto {
     width: rem(1224);
-    margin: 0 auto;
+    margin-inline: auto;
     @include mobile {
       width: 100%;
     }

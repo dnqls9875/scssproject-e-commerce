@@ -3,16 +3,14 @@
     position: absolute;
   } @else if $state == "fixed" or $state == "f" {
     position: fixed;
-  } @else if $state == "sticky" or $state == "s" {
+  } @else if $state == "sticky" of $state == "s" {
     position: sticky;
-  } @else if $state == "relative" or $state == "r" {
+  } @else if $state == "relative" of $state == "r" {
     position: relative;
   }
 
   #{$x}: $xv;
   #{$y}: $yv;
-  // 문자보간을 통해 x의 값이 클래스와 속성이 변수값으로 못 들어감으로 문자보간을 해줌!
-  // left가 $x에 들어가면 left의 값
   z-index: var(--z, $zIndex);
 
   // 좌표의 방향에 따라 translate의 값이 달라지므로 이를 상황에 따라 처리한다.
@@ -40,7 +38,7 @@
 
       // bottom 만 50%일때
     } @else if $yv == 50% {
-      translate: 0 50%;
+      translate: -50%;
     }
   } @else if $x == "right" and $y == "top" {
     // right 50% top 50%

@@ -2,7 +2,7 @@
   summary {
     background: #000;
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
   }
   ~ details {
@@ -11,7 +11,8 @@
   &[open] {
     border: 1px solid #000;
     summary + * {
-      padding: 20px;
+      padding: 10px;
+      font-size: 16px;
     }
   }
 }
