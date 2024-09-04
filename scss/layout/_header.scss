@@ -7,8 +7,8 @@
     }
     &__inner {
       @include mobile {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        // 순서를 바꿔야 할 듯 search를 3번째로 오게 해야 할 듯
         padding: rem(32) rem(24);
       }
       display: grid;
@@ -19,7 +19,6 @@
 
     &__search {
       @include mobile {
-        display: none;
       }
       display: grid;
       grid-template-columns: min-content 1fr min-content;
