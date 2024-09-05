@@ -6,57 +6,6 @@
     @include mobile {
     }
     &__inner {
-      @include mobile {
-        display: grid;
-        // 순서를 바꿔야 할 듯 search를 3번째로 오게 해야 할 듯
-        padding: rem(32) rem(24);
-      }
-      display: grid;
-      grid-template-columns: min-content 1fr min-content;
-      align-items: center;
-      padding: rem(40) rem(32) rem(40) rem(60);
-    }
-
-    &__search {
-      @include mobile {
-      }
-      display: grid;
-      grid-template-columns: min-content 1fr min-content;
-      align-items: center;
-      gap: rem(20);
-      width: rem(492);
-      height: rem(44);
-      border-radius: rem(70);
-      border: rem(1) solid rgba(195, 212, 233, 0.4);
-      background: $primary-0;
-      padding-inline: rem(20);
-      margin-left: rem(64);
-      &::before {
-        @include background("ico_search.svg");
-        content: "";
-        display: inline-flex;
-        align-items: center;
-        width: rem(24);
-        height: rem(24);
-      }
-      input {
-        color: $secondary-400;
-        font-size: rem(14);
-        font-weight: 500;
-        line-height: 150%;
-        letter-spacing: rem(-0.28);
-        border: none;
-        padding-block: rem(12);
-        background: transparent;
-
-        // &::before {
-        //   @include background("ico_search.svg");
-        //   content: "";
-        //   display: inline-flex;
-        //   width: rem(24);
-        //   height: rem(24);
-        // }
-      }
     }
   }
 }

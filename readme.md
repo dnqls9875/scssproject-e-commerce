@@ -3,7 +3,7 @@
 ### 코드를 복사합니다.
 
 ```bash
-npx degit dnqls9875/scssproject-rent .
+npx degit dnqls9875/scssproject-e-commerce .
 ```
 
 ### 설치순서
