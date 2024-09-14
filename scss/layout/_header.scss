@@ -5,7 +5,12 @@
   .header {
     @include mobile {
     }
+
     &__inner {
+      display: grid;
+      grid-template-columns: min-content 1fr min-content;
+      align-items: center;
+      gap: rem(285);
     }
   }
 }

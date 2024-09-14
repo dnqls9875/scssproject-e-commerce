@@ -1,0 +1,119 @@
+@use "sass:list";
+@use "../abstracts/" as *;
+
+$notificationColor: (
+  1: (
+    "className": ".base",
+    "bgColor": #f3f5f7,
+    "color": #343839,
+    "linkColor": #377dff,
+  ),
+  2: (
+    "className": ".black",
+    "bgColor": #141718,
+    "color": #fff,
+    "linkColor": #ffab00,
+  ),
+  3: (
+    "className": ".green",
+    "bgColor": #38cb89,
+    "color": #000,
+    "linkColor": #000,
+  ),
+  4: (
+    "className": ".blue ",
+    "bgColor": #377dff,
+    "color": #fff,
+    "linkColor": #fff,
+  ),
+);
+$notificationIcon: (
+  1: (
+    "className": ".ico1",
+    "direction": before,
+    "imgName": "ico_ticket.svg",
+    "width": 24,
+    "height": 24,
+  ),
+  2: (
+    "className": ".ico2",
+    "direction": before,
+    "imgName": "ico_ticket_white.svg",
+    "width": 24,
+    "height": 24,
+  ),
+);
+$notificationLinkArrow: (
+  1: (
+    "className": ".arrow1",
+    "direction": after,
+    "imgName": "ico_arrow_right.svg",
+    "width": 18,
+    "height": 18,
+  ),
+  2: (
+    "className": ".arrow2",
+    "direction": after,
+    "imgName": "ico_arrow_right_yellow.png",
+    "width": 18,
+    "height": 18,
+  ),
+  3: (
+    "className": ".arrow3",
+    "direction": after,
+    "imgName": "ico_arrow_right_black.png",
+    "width": 18,
+    "height": 18,
+  ),
+  4: (
+    "className": ".arrow4",
+    "direction": after,
+    "imgName": "ico_arrow_right_white.png",
+    "width": 18,
+    "height": 18,
+  ),
+);
+
+@layer Components.Notification {
+  .notification {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    padding-inline: rem(16);
+    height: rem(40);
+    &.fullszie {
+      width: 100%;
+    }
+    &__center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(12);
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: rem(22);
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(4);
+        font-weight: 500;
+        line-height: rem(24);
+        &::after {
+          content: "";
+          display: inline-block;
+          width: rem(18);
+          height: rem(18);
+        }
+        @for $index from 1 through list.length($notificationLinkArrow) {
+          @include notificationLinkArrow($notificationLinkArrow, $index);
+        }
+      }
+      @for $index from 1 through list.length($notificationIcon) {
+        @include notificationIcon($notificationIcon, $index);
+      }
+    }
+    @for $index from 1 through list.length($notificationColor) {
+      @include notificationColor($notificationColor, $index);
+    }
+  }
+}

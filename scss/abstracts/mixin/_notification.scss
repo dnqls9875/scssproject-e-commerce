@@ -1,0 +1,41 @@
+@use "./background" as *;
+@use "../function" as *;
+
+@mixin notificationColor($varName, $index) {
+  $item: map-get($varName, $index);
+  &#{map-get($item, 'className')} {
+    background-color: map-get($item, "bgColor");
+    color: map-get($item, "color");
+
+    a {
+      @if map-has-key($item, "linkColor") {
+        color: map-get($item, "linkColor");
+        border-bottom: rem(1) solid map-get($item, "linkColor");
+      } @else {
+        color: inherit;
+      }
+    }
+  }
+}
+
+@mixin notificationIcon($varName, $index) {
+  &#{map-get($varName,$index, className)} {
+    &::#{map-get($varName, $index, direction)} {
+      @include background(map-get($varName, $index, imgName));
+      content: "";
+      width: rem(map-get($varName, $index, width));
+      height: rem(map-get($varName, $index, height));
+    }
+  }
+}
+
+@mixin notificationLinkArrow($varName, $index) {
+  &#{map-get($varName,$index, className)} {
+    &::#{map-get($varName, $index, direction)} {
+      @include background(map-get($varName, $index, imgName));
+      content: "";
+      width: rem(map-get($varName, $index, width));
+      height: rem(map-get($varName, $index, height));
+    }
+  }
+}
