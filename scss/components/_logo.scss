@@ -1,14 +1,15 @@
 @use "../abstracts/" as *;
 
 .logo {
-  color: $primary-500;
-  font-size: rem(32);
-  font-weight: 700;
+  color: #000;
+  font-family: Poppins;
+  font-size: rem(24);
+  font-weight: 500;
   line-height: 150%;
-  letter-spacing: rem(-0.96);
+  text-align: center;
 
   @include mobile {
-    font-size: rem(24);
+    font-size: rem(16);
     line-height: 120%;
   }
 }

@@ -7,10 +7,16 @@
     }
 
     &__inner {
+      @extend .mxauto;
       display: grid;
       grid-template-columns: min-content 1fr min-content;
       align-items: center;
       gap: rem(285);
+    }
+    .utillity {
+      display: flex;
+      align-self: center;
+      gap: rem(16);
     }
   }
 }

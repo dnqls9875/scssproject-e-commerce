@@ -3,10 +3,12 @@
 
 @mixin notificationColor($varName, $index) {
   $item: map-get($varName, $index);
-  &#{map-get($item, 'className')} {
+  &#{map-get($item, className)} {
     background-color: map-get($item, "bgColor");
     color: map-get($item, "color");
 
+    // map-has-key :($map : 검색하려는 맵 , $key : 맵에서 확인하려는 키)
+    // map-has-key = 지정된 맵에 특정 키가 존재하는지 확인하는데 사용
     a {
       @if map-has-key($item, "linkColor") {
         color: map-get($item, "linkColor");

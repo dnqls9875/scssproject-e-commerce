@@ -63,4 +63,26 @@ $buttonIcon: (
       @include buttonIcon($buttonIcon, $index);
     }
   }
+  .btn-sitemap {
+  }
+  .btn-search {
+    @include background("ico_search.svg");
+    width: rem(24);
+    height: rem(24);
+  }
+  .btn-user {
+    @include background("ico_user.svg");
+    width: rem(24);
+    height: rem(24);
+  }
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+    &-btn {
+      @include background("ico_cart.svg");
+      width: rem(24);
+      height: rem(24);
+    }
+  }
 }
