@@ -76,6 +76,12 @@ $notificationLinkArrow: (
 
 @layer Components.Notification {
   .notification {
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      gap: rem(22);
+      padding-inline: rem(32);
+    }
     display: grid;
     grid-template-columns: 1fr min-content;
     align-items: center;
@@ -95,6 +101,9 @@ $notificationLinkArrow: (
       font-weight: 600;
       line-height: rem(22);
       a {
+        @include mobile {
+          display: none;
+        }
         display: inline-flex;
         align-items: center;
         gap: rem(4);

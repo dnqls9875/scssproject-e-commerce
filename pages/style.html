@@ -19,8 +19,10 @@
     </div>
     <header class="header">
       <div class="header__inner">
-        <button class="btn-sitemap only-mobile"></button>
-        <h1 class="logo">3legant.</h1>
+        <div class="header__left">
+          <button class="btn-sitemap only-mobile" popovertarget="sitemap"></button>
+          <h1 class="logo"><a href="">3legant.</a></h1>
+        </div>
         <nav class="gnb">
           <ul>
             <li><a href="">Home</a></li>
@@ -30,15 +32,54 @@
           </ul>
         </nav>
         <div class="utillity">
-          <button class="btn-search"></button>
+          <button class="btn-search" aria-label="검색"></button>
           <a href="" class="btn-user"></a>
           <div class="cart">
             <a href="" class="cart-btn"></a>
-            <div class="cart-count"></div>
+            <div class="cart-count">2</div>
           </div>
         </div>
       </div>
     </header>
+    <details name="guide" style="margin: 5rem">
+      <summary>site맵 ui만 구현해 봤는데 잘 안되서 일단 주석 처리 하였습니다!</summary>
+      <!-- <div class="sitemap" popover id="sitemap">
+      <nav class="sitemap__nav">
+        <div class="sitemap__top">
+          <p>3legant.</p>
+          <button class="btn-close"></button>
+        </div>
+        <div class="sitemap__search">
+          <input type="search" placeholder="Search" />
+        </div>
+        <ul>
+          <li>Home</li>
+          <li>
+            <details name="sitemap">
+              <summary>Shop</summary>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">서브메뉴</a></li>
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details name="sitemap">
+              <summary>Product</summary>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">서브메뉴</a></li>
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+    </div> -->
+    </details>
+
     <main>
       <details name="guide">
         <summary>Notification Bar 가이드</summary>
@@ -86,6 +127,53 @@
         </div>
       </details>
     </main>
-    <footer class="footer"></footer>
+    <br />
+    <br />
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__info">
+          <div class="footer__logo">
+            <a href="">3legant.</a>
+          </div>
+          <p>Gift & Decoration Store</p>
+        </div>
+        <div class="footer__menu">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">
+          <p>Copyright © 2023 3legant. All rights reserved</p>
+          <p>Privacy Policy</p>
+          <p>Terms of Use</p>
+        </div>
+        <div class="footer__sns">
+          <ul>
+            <li>
+              <a href="">
+                <img src="../images/ico_instagram.svg" alt="인스타그램" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../images/ico_facebook.svg" alt="페이스북" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../images/ico_youtube.svg" alt="유튜브 " />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -64,13 +64,30 @@ $buttonIcon: (
     }
   }
   .btn-sitemap {
+    @include background("ico_menubar.svg");
+    width: rem(24);
+    height: rem(24);
+    // body:has(#sitemap:popover-open) & {
+    //   @include background("ico_close_menu.svg");
+    // }
+  }
+  .btn-close {
+    @include background("ico_close_menu.svg");
+    width: rem(24);
+    aspect-ratio: 1;
   }
   .btn-search {
+    @include mobile {
+      display: none;
+    }
     @include background("ico_search.svg");
     width: rem(24);
     height: rem(24);
   }
   .btn-user {
+    @include mobile {
+      display: none;
+    }
     @include background("ico_user.svg");
     width: rem(24);
     height: rem(24);
@@ -83,6 +100,17 @@ $buttonIcon: (
       @include background("ico_cart.svg");
       width: rem(24);
       height: rem(24);
+    }
+    &-count {
+      color: #fff;
+      font-family: Inter;
+      font-size: rem(12);
+      font-weight: 700;
+      line-height: 1rem;
+      text-align: center;
+      padding: rem(5) rem(6);
+      background-color: #141718;
+      border-radius: rem(1000);
     }
   }
 }

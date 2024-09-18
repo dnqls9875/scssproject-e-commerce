@@ -4,6 +4,7 @@
 @layer Layout.Header {
   .header {
     @include mobile {
+      padding-inline: rem(32);
     }
 
     &__inner {
@@ -12,11 +13,44 @@
       grid-template-columns: min-content 1fr min-content;
       align-items: center;
       gap: rem(285);
+      padding-block: rem(16);
+
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+      }
     }
     .utillity {
       display: flex;
       align-self: center;
       gap: rem(16);
+    }
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: rem(4);
+    }
+  }
+}
+
+@layer Popup.Header {
+  @include mobile {
+    body {
+      &:has(#sitemap:popover-open) {
+        // .header .cart {
+        //   display: none;
+        // }
+        // .header__inner {
+        //   display: block;
+        // }
+        // .header__left {
+        //   justify-content: space-between;
+        //   gap: 0;
+        // }
+        // .btn-sitemap {
+        //   order: 2;
+        // }
+      }
     }
   }
 }

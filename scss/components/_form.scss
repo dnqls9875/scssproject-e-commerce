@@ -3,12 +3,12 @@
 
 // 폼요소 공통 디자인 정의
 $formSettings: (
-  "height": rem(40),
-  "border": rem(1) solid #000,
+  "height": rem(46),
+  "border": rem(1) solid #6c7275,
   "borderRadius": rem(4),
-  "bgColor": #000,
-  "paddingInline": rem(12),
-  "fontColor": #000,
+  "bgColor": transparent,
+  "paddingInline": rem(16),
+  "fontColor": #6c7275,
   "fontSize": rem(14),
   "lineHeight": 1,
   "letterSapcing": rem(-0.5),
@@ -89,10 +89,7 @@ $radioCheckSetting: (
   .select {
     $result: map-get($selectSetting, paddingInline) * 2 + map-get($selectSetting, bgWidth);
     @extend %form;
-    @include background(
-      map-get($selectSetting, bgUrl),
-      right map-get($selectSetting, iconPosition) center
-    );
+    @include background(map-get($selectSetting, bgUrl), right map-get($selectSetting, iconPosition) center);
     padding-right: rem($result);
     appearance: none;
     width: var(--w, 100%);

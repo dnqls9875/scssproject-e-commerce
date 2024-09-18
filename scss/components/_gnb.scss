@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+@use "../layout/align" as *;
+
+@layer Components.Gnb {
+  .gnb {
+    @include mobile {
+      display: none;
+    }
+    > ul {
+      display: flex;
+      gap: rem(40);
+      justify-content: center;
+      align-items: center;
+      > li {
+        > a {
+          color: #6c7275;
+          font-family: "Space Grotesk";
+          font-size: rem(14);
+          font-weight: 500;
+          line-height: rem(24);
+        }
+        &:hover {
+          a {
+            color: #141718;
+          }
+        }
+      }
+    }
+  }
+}

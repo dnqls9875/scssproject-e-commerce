@@ -1,0 +1,102 @@
+@use "../abstracts/" as *;
+
+@layer Components.Sitemap {
+  .sitemap {
+    display: none;
+    &::backdrop {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.32) 100%), url(<path-to-image>) lightgray 0px 0px / 100% 592.885% no-repeat;
+    }
+    @include mobile {
+      display: grid;
+      width: auto;
+      height: auto;
+      padding: rem(24);
+      inset: 0 rem(32) 0 0;
+      transition: 0.5s allow-discrete;
+      border: none;
+      overflow-x: hidden;
+      overflow-y: auto;
+      summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        white-space: nowrap;
+        &::after {
+          @include background("ico_arrow_down.svg");
+          content: "";
+          display: inline-block;
+          width: rem(24);
+          height: rem(24);
+        }
+      }
+
+      &:popover-open {
+        inset: 0 rem(32) 0 0;
+        @starting-style {
+          inset: 0 rem(32) 0 0;
+        }
+      }
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      > ul {
+        display: grid;
+        gap: rem(16);
+        > li {
+          color: #141718;
+          font-size: rem(14);
+          line-height: rem(24);
+          font-weight: 500;
+          padding-bottom: rem(16);
+          border-bottom: rem(1) solid #e8ecef;
+        }
+      }
+    }
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      height: rem(24);
+      align-items: center;
+      p {
+        color: #000;
+        font-family: Poppins;
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: rem(24);
+        text-align: center;
+      }
+    }
+    &__search {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      align-items: center;
+      gap: rem(8);
+      height: 4.6rem;
+      padding-inline: rem(16);
+      border-radius: rem(6);
+      border: rem(1) solid #6c7275;
+      background: #fff;
+      &::before {
+        content: "";
+        display: inline-flex;
+        @include background("ico_search.svg");
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      input {
+        border: none;
+        height: rem(22);
+        color: #6c7275;
+        font-family: Inter;
+        font-size: rem(14);
+        font-weight: 400;
+        line-height: rem(22);
+      }
+    }
+  }
+}
